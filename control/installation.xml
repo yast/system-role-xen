@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<productDefines xmlns="http://www.suse.com/1.0/yast2ns" xmlns:config="http://www.suse.com/1.0/configns">
+
+<!--
+Work around for the text domain
+textdomain="control"
+-->
+
+    <textdomain>control</textdomain>
+
+    <texts>
+      <xen_host_role>
+        <!-- TRANSLATORS: a label for a system role -->
+        <label>Xen Virtualization Host</label>
+      </xen_host_role>
+      <xen_host_role_description>
+        <label>• Bare metal hypervisor and tools
+• No separate /home partition</label>
+      </xen_host_role_description>
+    </texts>
+
+    <update>
+      <system_roles>
+        <insert_system_roles config:type="list">
+          <insert_system_role>
+            <!-- FATE#317481 -->
+            <system_roles config:type="list">
+              <system_role>
+                <id>xen_host_role</id>
+                <order config:type="integer">3000</order>
+                <partitioning>
+                  <try_separate_home config:type="boolean">false</try_separate_home>
+                </partitioning>
+                <software>
+                  <default_patterns>base Minimal xen_server</default_patterns>
+                  <optional_default_patterns><![CDATA[]]></optional_default_patterns>
+                </software>
+              </system_role>
+            </system_roles>
+          </insert_system_role>
+        </insert_system_roles>
+      </system_roles>
+    </update>
+</productDefines>
