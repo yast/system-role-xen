@@ -1,4 +1,4 @@
-skelcd-control-server-xen-role
+system-role-xen
 ==============================
 
 Extension package that lives in module and extend installation by roles provided by this module.
