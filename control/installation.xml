@@ -32,7 +32,7 @@ textdomain="control"
                   <try_separate_home config:type="boolean">false</try_separate_home>
                 </partitioning>
                 <software>
-                  <default_patterns>base Minimal xen_server</default_patterns>
+                  <default_patterns>base xen_server</default_patterns>
                   <optional_default_patterns><![CDATA[]]></optional_default_patterns>
                 </software>
               </system_role>
