@@ -20,7 +20,6 @@
     </xen_host_role_description>
   </texts>
 
-  <globals>
  <globals>
     <enable_autologin config:type="boolean">false</enable_autologin>
     <enable_firewall config:type="boolean">false</enable_firewall>
