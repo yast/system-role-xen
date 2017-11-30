@@ -1,4 +1,16 @@
 -------------------------------------------------------------------
+Wed Oct 18 08:27:19 UTC 2017 - aginies@suse.com
+
+- Propose a separate /var/lib/libvirt partition or logical volume
+  using the new format in the <partitioning> format of the control
+  file (part of fate#324207) (ancor@suse.com)
+- xen server and tools patterns selected
+- disable kdump and firewall
+- ntp default setup
+- FATE#324207: Improve Virtualization System role (XEN/KVM)
+- 15.0.2
+
+-------------------------------------------------------------------
 Wed Oct  4 22:35:58 UTC 2017 - sflees@suse.de
 
 - Drop Minimal from software list, it doesn't exist anymore and
