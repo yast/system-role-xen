@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Fri Apr 20 09:57:52 CEST 2018 - aginies@suse.com
+
+- adjust XEN description (FATE#324207)
+- 15.0.6
+
+-------------------------------------------------------------------
 Wed Jan 10 16:20:11 UTC 2018 - rbrown@suse.com
 
 - adjust subvolume list to have NoCOW /var instead of many
