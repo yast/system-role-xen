@@ -35,7 +35,7 @@ BuildRequires:  yast2-installation-control >= 4.0.0
 
 Url:            https://github.com/yast/system-role-xen
 AutoReqProv:    off
-Version:        15.0.7
+Version:        15.0.6
 Release:        0
 Summary:        Server Xen role definition
 License:        MIT
