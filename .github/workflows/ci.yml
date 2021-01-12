@@ -6,27 +6,6 @@ name: CI
 on: [push, pull_request]
 
 jobs:
-  Tests:
-    runs-on: ubuntu-latest
-    container: registry.opensuse.org/yast/head/containers/yast-ruby:latest
-
-    steps:
-
-    - name: Git Checkout
-      uses: actions/checkout@v2
-
-    # FIXME: optionally install the missing dependencies
-    # - name: Install Dependencies
-    #   run: zypper --non-interactive install foobar
-
-    # just for easier debugging...
-    - name: Inspect Installed Packages
-      run: rpm -qa | sort
-
-    # run checks
-    - name: Checks
-      run: make -C control check
-
   Package:
     runs-on: ubuntu-latest
     container: registry.opensuse.org/yast/head/containers/yast-ruby:latest
@@ -50,9 +29,13 @@ jobs:
     - name: Git Checkout
       uses: actions/checkout@v2
 
+    # just for easier debugging...
+    - name: Inspect Installed Packages
+      run: rpm -qa | sort
+
+    # run checks
+    - name: XML Check
+      run: make -C control check
+
     - name: POT Check
       run: rake check:pot
-
-    # FIXME: add additional checks here:
-    # - name: Shell Check
-    #   run: shellcheck ...
